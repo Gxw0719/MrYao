@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人介绍</title>
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 头部导航与个人头像区域 */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* 主体内容容器 */
+        .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* 每个模块的样式 */
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        /* 个人简介样式 */
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* 技能展示样式 */
+        .skills .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skills .skill-item {
+            background-color: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+
+        /* 履历样式 */
+        .experience .exp-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #3498db;
+        }
+
+        .experience .exp-item h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        .experience .exp-item .time {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 底部样式 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        /* 响应式适配（手机端） */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .skills .skill-list {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部：头像+姓名+标签 -->
+    <header>
+        <img src="https://picsum.photos/200/200" alt="个人头像" class="avatar">
+        <h1>姚月月>yaoq
+        <p class="subtitle">学生 | 江苏建筑职业技术学院</p>
+    </header>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <!-- 个人简介模块 -->
+        <section class="section intro">
+            <h2>关于我</h2>
+            <p>大家好，我是张三，一名拥有3年前端开发经验的工程师，就读于XX大学计算机科学与技术专业。</p>
+            <p>我精通HTML、CSS、JavaScript三大核心技术，熟练使用Vue、React等前端框架，擅长搭建高效、美观、响应式的网页应用。</p>
+            <p>工作之余，我喜欢阅读技术博客、跑步健身和旅行，始终保持对新技术的探索热情，致力于成为更优秀的技术从业者。</p>
+        </section>
+
+        <!-- 技能展示模块 -->
+        <section class="section skills">
+            <h2>我的技能</h2>
+            <div class="skill-list">
+                <div class="skill-item">HTML5/CSS3</div>
+                <div class="skill-item">JavaScript/TypeScript</div>
+                <div class="skill-item">Vue.js</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Webpack</div>
+                <div class="skill-item">响应式布局</div>
+                <div class="skill-item">UI设计基础</div>
+            </div>
+        </section>
+
+        <!-- 简单履历模块 -->
+        <section class="section experience">
+            <h2>工作履历</h2>
+            <div class="exp-item">
+                <h3>XX科技有限公司 - 前端开发工程师</h3>
+                <p class="time">2022.07 - 至今</p>
+                <p>负责公司官网及内部管理系统的前端开发与维护，参与多个大型项目的前端架构设计，优化页面加载速度提升30%。</p>
+            </div>
+            <div class="exp-item">
+                <h3>XX互联网工作室 - 前端实习生</h3>
+                <p class="time">2021.12 - 2022.06</p>
+                <p>协助团队完成网页切图与静态页面制作，学习并实践Vue框架开发，参与小型项目的功能迭代与bug修复。</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <p>© 2025 姚月月 - 个人介绍网站 | 联系方式：zhangsan@example.com</p>
+    </footer>
+
+    <!-- 简单JS交互：页面加载完成后轻微提示 -->
+    <script>
+        window.onload = function() {
+            console.log("个人介绍网站加载完成！");
+            // 可选：添加页面滚动平滑效果
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+</html>
